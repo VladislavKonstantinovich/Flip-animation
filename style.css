@@ -11,6 +11,11 @@ body {
     perspective: 500px;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+}
+
 .text {
     padding-top: 15px;
     font-size: 62px;
@@ -23,30 +28,34 @@ body {
     width: 300px;
     height: 100px;
     background-color: springgreen;
-    margin: 50px auto;
+    margin: 50px 20px;
     cursor: pointer;
 }
 
-.box:hover {
-    animation: flipH 1s linear;
+#box1:hover {
+    animation: flipV 1.5s linear;
+}
+
+#box2:hover {
+    animation: flipH 1.5s linear;
 }
 
 @keyframes flipV {
     50%{
-        transform: rotateX(180deg);
+        transform: rotateX(360deg);
     }
 
     to{
-        transform: rotateX(300deg);
+        transform: rotateX(720deg);
     }
 }
 
 @keyframes flipH {
     50%{
-        transform: rotateY(180deg);
+        transform: rotateY(360deg);
     }
 
     to{
-        transform: rotateY(360deg);
+        transform: rotateY(720deg);
     }
 }
